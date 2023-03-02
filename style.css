@@ -27,6 +27,41 @@
         text-decoration: none;
     }
 
+    details {
+        border-bottom: 1px dashed var(--color-text-medium);
+        position: relative;
+    }
+
+    details[open] {
+        border-bottom: none;
+    }
+
+    details > summary {
+        list-style: none;
+        cursor: s-resize;
+    }
+
+    details > summary:after {
+        content: '⇣';
+        position: absolute;
+        bottom: -20px;
+        text-align: center;
+        left: 0;
+        width: 100%;
+    }
+
+    details[open] {
+        border-bottom: none;
+    }
+
+    details[open] > summary {
+        cursor: n-resize;
+    }
+
+    details[open] > summary:after {
+        content: '⇡';
+    }
+
     .page-break {
     }
 

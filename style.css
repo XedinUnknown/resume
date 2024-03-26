@@ -401,6 +401,16 @@
 }
 
 @media print {
+    @page {
+        margin: 0;
+        size: A4 portrait;
+    }
+
+    * {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
     body {
         display: block;
     }
